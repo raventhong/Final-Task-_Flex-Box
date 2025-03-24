@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
+
+    .flexbox-1 {
+      display: flex;
+      gap: 0;
+      margin-bottom: 20px;
+    }
+    .flexbox-1 .item1, .flexbox-1 .item2 {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      padding: 1px;
+    }
+    .flexbox-1 .item1 {
+      width: 200px;
+      background-color: lightblue;
+    }
+    .flexbox-1 .item2 {
+      width: 75px;
+      background-color: pink;
+    }
+
+    .flexbox-2 {
+      display: flex;
+      gap: 0;
+      margin-bottom: 20px;
+    }
+    .flexbox-2 .item1, .flexbox-2 .item2, .flexbox-2 .item3 {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      padding: 1px;
+    }
+    .flexbox-2 .item1 {
+      width: 50px;
+      background-color: lightblue;
+    }
+    .flexbox-2 .item2 {
+      flex-grow: 1;
+      background-color: pink;
+    }
+    .flexbox-2 .item3 {
+      width: 75px;
+      background-color: lightblue;
+    }
+
+    .flexbox-even {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .flexbox-even div {
+      width: 40px;
+      text-align: left;
+      background-color: pink;
+      display: flex;
+      align-items: center;
+      padding: 1px;
+    }
+
+    .flexbox-4 {
+      display: flex;
+      border: 1px solid #bebebe;
+      height: 50px;
+      align-items: center;
+      gap: 1230px;
+    }
+    .flexbox-4 div {
+      flex: 1;
+      text-align: left;
+      background-color: pink;
+      padding: 1px;
+    }
+
+    .flexbox-spacing {
+      display: flex;
+      height: 50px;
+      margin: 2px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #763bbb;
+      padding: 10px;
+    }
+    .navbar .home {
+      color: white;
+      font-size: 14px;
+    }
+    .navbar .search {
+      margin: 0;
+      padding: 3px;
+      border: 1px solid white;
+      border-radius: 20px;
+      width: 1050px;
+      text-align: left;
+    }
+    .navbar .download {
+      background-color: #763bbb;
+      color: white;
+      padding: 8px 15px;
+      font-size: 14px;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      border: 1px solid #bebebe;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .sidebar .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .sidebar .item .count {
+      background-color: #1e88e5;
+      color: white;
+      padding: 3px 9px;
+      border-radius: 40%;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="flexbox-1">
+    <div class="item1">200px</div>
+    <div class="item2">75px</div>
+  </div>
+
+  <div class="flexbox-2">
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>
+  </div>
+
+  <div class="flexbox-even">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    <div>item4</div>
+  </div>
+
+  <div class="flexbox-4">
+    <div>item1</div>
+    <div>item2</div>
+  </div>
+
+  <div class="flexbox-spacing"></div>
+
+  <div class="navbar">
+    <div class="home">Home</div>
+    <input type="text" class="search" placeholder="Search">
+    <button class="download">Download</button>
+  </div>
+
+  <div class="flexbox-spacing"></div>
+
+  <div class="sidebar">
+    <div class="item">
+      <span>Home</span>
+      <span class="count">14</span>
+    </div>
+    <div class="item">
+      <span>Notifications</span>
+      <span class="count">3</span>
+    </div>
+    <div class="item">
+      <span>Messages</span>
+      <span class="count">5</span>
+    </div>
+  </div>
+</body>
+</html>
